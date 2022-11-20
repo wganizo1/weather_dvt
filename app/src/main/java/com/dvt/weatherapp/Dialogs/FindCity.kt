@@ -3,14 +3,6 @@ package com.dvt.weatherapp.Dialogs
 import android.app.Activity
 import android.app.Dialog
 import android.content.Context
-import android.graphics.BlendMode
-import android.graphics.BlendModeColorFilter
-import android.graphics.Color
-import android.graphics.PorterDuff
-import android.graphics.drawable.Drawable
-import android.os.Build
-import android.widget.*
-import androidx.cardview.widget.CardView
 import com.dvt.weatherapp.R
 
 class FindCity {

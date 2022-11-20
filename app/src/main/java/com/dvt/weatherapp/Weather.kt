@@ -22,7 +22,6 @@ import com.dvt.weatherapp.Adapters.CurrentAdapter
 import com.dvt.weatherapp.Adapters.FocustAdapter
 import com.dvt.weatherapp.Constants.Constants
 import com.dvt.weatherapp.Dialogs.CustomProgressDialog
-import com.dvt.weatherapp.Dialogs.FindCity
 import com.dvt.weatherapp.ViewModels.CurrentWeatherViewModel
 import com.dvt.weatherapp.ViewModels.FocustViewModel
 import com.google.android.gms.location.FusedLocationProviderClient
