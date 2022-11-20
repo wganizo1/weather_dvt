@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+<!--    <color name="sunny">#47AB2F</color>-->
+    <color name="sunny">#54717A</color>
+    <color name="cloudy">#54717A</color>
+    <color name="rainy">#57575D</color>
+    <color name="dialogBackground">#00000050</color>
+</resources>
