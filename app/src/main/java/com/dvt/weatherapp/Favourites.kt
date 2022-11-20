@@ -9,10 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dvt.weatherapp.Adapters.CurrentAdapter
-import com.dvt.weatherapp.Adapters.FocustAdapter
 import com.dvt.weatherapp.Constants.Constants
 import com.dvt.weatherapp.ViewModels.CurrentWeatherViewModel
-import com.dvt.weatherapp.ViewModels.FocustViewModel
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import okhttp3.*
@@ -29,7 +27,8 @@ class Favourites : AppCompatActivity() {
     private val constants = Constants()
     private var client = OkHttpClient()
     private lateinit var home: ImageView
-    private lateinit var my_fav: ImageView
+    private lateinit var myFav: ImageView
+    private lateinit var search: ImageView
     private val currentWeatherdata = ArrayList<CurrentWeatherViewModel>()
     private var myCity: String = ""
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -41,8 +40,9 @@ class Favourites : AppCompatActivity() {
 
         //Initialise
         home = findViewById(R.id.home)
-        my_fav = findViewById(R.id.favourite)
-        my_fav.setImageResource(R.mipmap.my_fav)
+        myFav = findViewById(R.id.favourite)
+        search = findViewById(R.id.search)
+        myFav.setImageResource(R.mipmap.my_fav)
 
         //Initialise Location Client
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
@@ -56,6 +56,11 @@ class Favourites : AppCompatActivity() {
         //Show Home screen
         home.setOnClickListener {
             val intent = Intent(this, Weather::class.java)
+            startActivity(intent)
+        }
+        //Show Find screen
+        search.setOnClickListener {
+            val intent = Intent(this, Search::class.java)
             startActivity(intent)
         }
     }
