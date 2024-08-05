@@ -1,8 +1,23 @@
 # weather_dvt
 
-My overall Implementation involves the use of MVVM for this project
+My overall Implementation involves but not limited to a demostration the following:
+    Use of MVVM
+    Data Binding
+    Use of Fragments
+    Sqlite Database
+    Geo Location
+    Solid Principles
+    Retrofit Library
+    and so many more
 
-The following is a breakdown of different approaches I took
+
+SUMMARY
+The Solution has three main UIs:
+    Weather (Show current weather and focust as well as min and maximum temperatures)
+    Search option to find a city (Upon selecting the auto completed option, the weather details will be show displayed)
+    Favorites (This relies on the previous search made, they will be auto saved an displayed on the UI. Upon select, it will display     the details)
+
+The following is a breakdown of different approach I took
 
 Dependencies:
 Glide - for the dynamic icon used in the weather focus
