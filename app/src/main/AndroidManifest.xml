@@ -28,10 +28,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Favourites"
-            android:label="@string/app_name">
-        </activity>
-        <activity
             android:name=".Search"
             android:label="@string/app_name">
         </activity>

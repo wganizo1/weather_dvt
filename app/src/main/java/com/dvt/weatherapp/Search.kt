@@ -14,7 +14,6 @@ import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 import java.util.*
 
-
 class Search : AppCompatActivity() {
     var placesClient: PlacesClient? = null
     private lateinit var favourites: ImageView
@@ -37,6 +36,13 @@ class Search : AppCompatActivity() {
             startActivity(intent)
         }
 
+        favourites.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, FavoritesFragment())
+                .commit()
+
+        }
+
         // Create a new Places client instance.
         placesClient = Places.createClient(this)
 
@@ -55,8 +61,13 @@ class Search : AppCompatActivity() {
         autocompleteFragment.setOnPlaceSelectedListener(object : PlaceSelectionListener {
             override fun onPlaceSelected(place: Place) {
                 // TODO: Get info about the selected place.
+
+                val dbHelper = CitiesDatabaseHelper(applicationContext)
+                dbHelper.insertCity(place.name)
+                println("Saved ${place.name} to Fav")
+
                 val bundle = Bundle()
-                val intent = Intent(applicationContext, Favourites::class.java)
+                val intent = Intent(applicationContext, Weather::class.java)
                 bundle.putString ("place", place.name)
                 intent.putExtras(bundle)
                 startActivity(intent)
