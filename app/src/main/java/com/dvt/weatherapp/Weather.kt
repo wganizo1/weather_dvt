@@ -48,7 +48,7 @@ class Weather : AppCompatActivity() {
 
         val locationManager = getSystemService(LOCATION_SERVICE) as LocationManager
         locationUtils = LocationUtils(this, locationManager, LocationServices.getFusedLocationProviderClient(this))
-
+        locationUtils.getLocation()
         weatherViewModel.weatherData.observe(this) { json ->
             displayCurrentWeather(json)
         }
@@ -91,6 +91,7 @@ class Weather : AppCompatActivity() {
     override fun onBackPressed() {
         if (supportFragmentManager.backStackEntryCount > 0) {
             supportFragmentManager.popBackStack()
+            // Show the activity's content again
             findViewById<View>(R.id.weather_scrollview).visibility = View.VISIBLE
         } else {
             super.onBackPressed()
