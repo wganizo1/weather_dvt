@@ -7,7 +7,6 @@ My overall Implementation involves but not limited to a demostration the followi
     Sqlite Database
     Geo Location
     Solid Principles
-    Retrofit Library
     and so many more
 
 
